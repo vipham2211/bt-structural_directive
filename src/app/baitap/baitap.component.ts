@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bai-tap',
-  templateUrl: './bai-tap.component.html',
-  styleUrls: ['./bai-tap.component.scss']
+  selector: 'app-baitap',
+  templateUrl: './baitap.component.html',
+  styleUrls: ['./baitap.component.scss']
 })
-export class BaiTapComponent implements OnInit {
+export class BaitapComponent implements OnInit {
 
   p: number = 1;
   mangSanPham: any[] = [{MaSP:1,TenSP:"SonyXZ",Gia:1000}

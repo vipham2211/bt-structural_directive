@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BaiTapComponent } from './bai-tap.component';
+import { BaitapComponent } from './baitap.component';
 
-describe('BaiTapComponent', () => {
-  let component: BaiTapComponent;
-  let fixture: ComponentFixture<BaiTapComponent>;
+describe('BaitapComponent', () => {
+  let component: BaitapComponent;
+  let fixture: ComponentFixture<BaitapComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BaiTapComponent ]
+      declarations: [ BaitapComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BaiTapComponent);
+    fixture = TestBed.createComponent(BaitapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
