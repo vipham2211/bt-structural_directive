@@ -1,0 +1,67 @@
+<div class="container ">
+    <h1 class="text-gray">Bài tập structural-directive - CYBERSOFT</h1>
+
+    <div class="border">
+        <div class="bg-dark rounded-lg p-1">
+            <h3 class="text-white pl-3">Quản lý danh mục sản phẩm</h3>
+        </div>
+
+
+        <div class="row pl-5 pb-4  mt-5 d-flex align-content-center ">
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input class="form-control" #maSP type="text" placeholder="MaSP">
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input class="form-control" #tenSP type="text" placeholder="TenSP">
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <input class="form-control" #giaSP type="text" placeholder="Gia">
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <button (click)='addItem(maSP.value,tenSP.value,giaSP.value)' class="btn btn-success">Thêm sản phẩm</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-5 ">
+
+
+    <div class="border">
+        <div class="bg-dark rounded-lg p-1">
+            <h3 class="text-white pl-3">Danh mục sản phẩm</h3>
+        </div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Mã SP</th>
+                    <th>Tên SP</th>
+                    <th>Giá</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let sanPham of mangSanPham | paginate: { itemsPerPage: 10, currentPage: p } ; let stt=index'>
+                    <td>{{sanPham.MaSP}} </td>
+                    <td>{{sanPham.TenSP}}</td>
+                    <td>{{sanPham.Gia}} </td>
+                    <td> <button class="btn btn-danger" (click)='xoaBtn(sanPham.MaSP)'>xoá</button></td>
+                </tr>
+                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </tbody>
+        </table>
+
+    </div>
+</div>
